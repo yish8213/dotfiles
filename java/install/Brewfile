@@ -1,0 +1,13 @@
+cask_args appdir: '/Applications'
+
+# Java development
+cask 'java' unless system '/usr/libexec/java_home --failfast'
+cask 'intellij-idea'
+
+brew 'gradle'
+brew 'maven'
+brew 'groovy', args: ['--with-invokedynamic']
+
+# Install Spring Boot
+tap 'pivotal/tap'
+brew 'springboot'

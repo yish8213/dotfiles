@@ -1,0 +1,3 @@
+cask_args appdir: '/Applications'
+
+brew 'curl', args: ['--with-c-ares', '--with-gssapi', '--with-libidn', '--with-libidn', '--with-libmetalink', '--with-libressl', '--with-libssh2', '--with-nghttp2', '--with-openssl', '--with-rtmpdump']

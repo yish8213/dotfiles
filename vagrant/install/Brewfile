@@ -1,0 +1,6 @@
+cask_args appdir: '/Applications'
+
+cask 'virtualbox'
+cask 'vagrant'
+
+brew 'vagrant-completion'
