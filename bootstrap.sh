@@ -52,7 +52,10 @@ brew cask cleanup
 # Run GNU Stow
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
-dirlist=$(find $THIS_DIR -mindepth 1 -maxdepth 1 -type d | awk -F/ '{print $NF}')
+# Treat the personal configurations first
+if [ -f "$THIS_DIR/not-shared" ]; then
+  stow --restow --target="$HOME" --ignore="install*" "not-shared"
+fi
 
 for dir in $dirlist
 do
