@@ -1,5 +1,16 @@
 cask_args appdir: '/Applications'
 
+# GNU tools
+## See https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+brew 'coreutils'
+
+tap 'homebrew/dupes'
+brew 'gnu-tar', args: ['—with-default-names']
+brew 'gnu-which', args: ['—with-default-names']
+brew 'grep', args: ['—with-default-names']
+brew 'gzip'
+brew 'lsof'
+brew 'rsync'
 
 # Development
 cask 'sourcetree'
