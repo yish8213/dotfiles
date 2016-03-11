@@ -57,6 +57,8 @@ if [ -f "$THIS_DIR/not-shared" ]; then
   stow --restow --target="$HOME" --ignore="install*" "not-shared"
 fi
 
+dirlist=$(find $THIS_DIR -mindepth 1 -maxdepth 1 -type d -not  \( -path "./.*" \) | awk -F/ '{print $NF}')
+
 for dir in $dirlist
 do
   (
