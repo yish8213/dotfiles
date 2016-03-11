@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
-
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
 
 export PATH=$JAVA_HOME/bin:$PATH
+
+# Enable tab completion for `spring-boot`
+if which brew > /dev/null && [ -f `brew --prefix`/etc/bash_completion.d/spring ]; then
+    source `brew --prefix`/etc/bash_completion.d/spring
+fi

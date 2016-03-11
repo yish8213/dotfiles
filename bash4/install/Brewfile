@@ -1,3 +1,4 @@
 cask_args appdir: '/Applications'
 
 brew 'bash'
+brew 'bash-completion'

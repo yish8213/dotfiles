@@ -4,3 +4,5 @@ cask 'virtualbox'
 cask 'vagrant'
 
 brew 'vagrant-completion'
+
+brew 'fleetctl'
