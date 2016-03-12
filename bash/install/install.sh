@@ -4,15 +4,19 @@
 
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
-if test ! -f /usr/local/bin/bash
+THIS_SHELL='bash'
+
+if test ! -f "/usr/local/bin/$THIS_SHELL"
 then
   # Install Bash 4.
-  # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-  # running `chsh`.
   brew bundle --file="$THIS_DIR/Brewfile"
 
   # Add the new shell to the list of allowed shells
-  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+  sudo bash -c "echo /usr/local/bin/$THIS_SHELL >> /etc/shells"
+
   # Change to the new shell
-  chsh -s /usr/local/bin/bash
+  if [ "$LOGIN_SHELL" == "$THIS_SHELL" ]
+  then
+    chsh -s "/usr/local/bin/$LOGIN_SHELL"
+  fi
 fi

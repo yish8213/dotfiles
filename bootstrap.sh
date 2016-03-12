@@ -6,6 +6,11 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Load the configurations
+THIS_DIR=$(cd "$(dirname "$0")"; pwd)
+
+source "$THIS_DIR/.config"
+
 # Homebrew
 #
 # This installs some of the common dependencies needed (or at least desired)
@@ -50,8 +55,6 @@ brew cask cleanup
 
 
 # Run GNU Stow
-THIS_DIR=$(cd "$(dirname "$0")"; pwd)
-
 # Treat the personal configurations first
 if [ -f "$THIS_DIR/not-shared" ]; then
   stow --restow --target="$HOME" --ignore="install*" "not-shared"
