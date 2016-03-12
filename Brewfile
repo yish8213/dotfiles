@@ -10,6 +10,7 @@ brew 'stow'
 # Utils
 brew 'p7zip'
 
+cask 'alfred'
 cask 'cheatsheet'
 cask 'appcleaner'
 
@@ -19,7 +20,7 @@ cask 'bettertouchtool'
 # Privacy
 brew 'tor', args: ['--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc']
 brew 'arm'
-# cask 'torbrowser'
+cask 'torbrowser'
 
 cask 'gpgtools'
 
@@ -53,10 +54,12 @@ cask 'gmvault'
 cask 'amazon-cloud-drive'
 cask 'chronosync'
 
-# Music & Video
+# Multimedia
 cask 'vlc'
 cask 'air-video-server-hd'
 cask 'spotify'
+cask 'edgeview'
+# cask 'tvmobili'
 
 cask 'anki'
 cask 'transmission'

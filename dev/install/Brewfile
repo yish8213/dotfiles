@@ -11,6 +11,10 @@ brew 'grep', args: ['—with-default-names']
 brew 'gzip'
 brew 'lsof'
 brew 'rsync'
+brew 'colordiff'
+# send files to OSX trash instead of deleting them
+brew 'rmtrash'
+
 
 # Development
 cask 'sourcetree'

@@ -45,6 +45,11 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+# Add tab completion for many Homebrew commands
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/brew_bash_completion.sh" ]; then
+	source "$(brew --prefix)/etc/brew_bash_completion.sh"
+fi;
+
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
