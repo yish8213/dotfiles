@@ -8,6 +8,8 @@ brew 'gradle'
 brew 'maven'
 brew 'groovy', args: ['--with-invokedynamic']
 
+brew 'jmeter', args: ['--with-plugins']
+
 # Install Spring Boot
 tap 'pivotal/tap'
 brew 'springboot'

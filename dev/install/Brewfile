@@ -20,6 +20,10 @@ brew 'rmtrash'
 cask 'sourcetree'
 cask 'p4merge'
 
+cask 'tunnelblick'
+
+cask 'redis'
+
 # Databases
 cask 'mysqlworkbench'
 

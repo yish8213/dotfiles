@@ -1,0 +1,6 @@
+cask_args appdir: '/Applications'
+
+brew 'fleetctl'
+
+cask 'dockertoolbox'
+
