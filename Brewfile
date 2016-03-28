@@ -27,7 +27,7 @@ cask 'gpgtools'
 cask '1password'
 
 # Shell
-cask 'iterm2'
+cask 'iterm2-beta'
 cask 'path-finder'
 cask 'go2shell'
 
