@@ -2,6 +2,10 @@ cask_args appdir: '/Applications'
 
 # Java development
 cask 'java' unless system '/usr/libexec/java_home --failfast'
+
+tap 'caskroom/versions'
+cask 'java7'
+
 cask 'intellij-idea'
 
 brew 'gradle'

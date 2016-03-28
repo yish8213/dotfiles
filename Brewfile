@@ -1,14 +1,19 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
+tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/versions'
 tap 'homebrew/completions'
 
 brew 'stow'
 
+cask 'cakebrew'
+
 # Utils
 brew 'p7zip'
+brew 'testdisk'
+
 
 cask 'alfred'
 cask 'cheatsheet'
@@ -16,6 +21,7 @@ cask 'appcleaner'
 
 cask 'bartender'
 cask 'bettertouchtool'
+
 
 # Privacy
 brew 'tor', args: ['--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc']
@@ -35,12 +41,18 @@ cask 'go2shell'
 cask 'firefox'
 cask 'google-chrome'
 
+# Office
+cask 'skype'
+# cask 'pdfpenpro'
+
 # Writing
 brew 'commonmark'
 cask 'marked'
 cask 'markdown-service-tools'
 
 cask 'grammarly'
+
+brew 'gtypist'
 
 # Reading
 cask 'ridibooks'

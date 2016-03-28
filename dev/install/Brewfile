@@ -25,6 +25,7 @@ cask 'tunnelblick'
 cask 'redis'
 
 # Databases
+brew 'mysql'
 cask 'mysqlworkbench'
 
 # Install Cyberduck and its command line interface. See https://duck.sh/
