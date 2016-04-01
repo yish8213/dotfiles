@@ -46,3 +46,6 @@ cask 'sshfs'
 brew 's3cmd'
 
 # cask 'manopen'
+
+# Android
+brew 'android-sdk'

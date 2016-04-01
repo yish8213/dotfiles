@@ -1,2 +1,3 @@
 not-shared
+java/.gradle
 *.log
