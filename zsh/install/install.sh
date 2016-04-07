@@ -15,7 +15,7 @@ then
 fi
 
 # Change to the new shell
-if [ "$LOGIN_SHELL" == "$THIS_SHELL" ] && [ "$THIS_SHELL_PATH" == "`finger -l $USER | awk '/Shell/' | awk '{ print $4 }'`" ]
+if [ "$LOGIN_SHELL" == "$THIS_SHELL" ] && [ "$THIS_SHELL_PATH" != "`finger -l $USER | awk '/Shell/' | awk '{ print $4 }'`" ]
 then
   chsh -s "$THIS_SHELL_PATH"
 fi
