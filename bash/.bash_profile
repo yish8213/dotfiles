@@ -61,3 +61,9 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# Just for fun
+# http://haruair.com/blog/3521
+if [ -e $(which fortune) ] && [ -e $(which cowsay) ]; then
+	fortune | cowsay
+fi

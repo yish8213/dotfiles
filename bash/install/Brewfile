@@ -2,3 +2,8 @@ cask_args appdir: '/Applications'
 
 brew 'bash'
 brew 'bash-completion'
+
+# Just for fun
+brew 'fortune', args: ['--without-offensive']
+brew 'cowsay'
+brew 'ponysay'
