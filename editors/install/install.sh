@@ -6,19 +6,22 @@ brew bundle --file="$THIS_DIR/Brewfile"
 
 # Install Atom plugins
 ## https://atom.io/packages/sync-settings
-if test ! -d "$HOME/.atom/packages/sync-settings"
-then
-  apm install sync-settings
-fi
-
 ## https://atom.io/packages/auto-update-packages
-if test ! -d "$HOME/.atom/packages/auto-update-packages"
-then
-  apm install auto-update-packages
-fi
-
+## https://atom.io/packages/project-manager
 ## https://atom.io/packages/file-icons
-if test ! -d "$HOME/.atom/packages/file-icons"
-then
-  apm install file-icons
-fi
+## https://atom.io/packages/linter-shellcheck
+PLUGINS=(
+  sync-settings
+  auto-update-packages
+  project-manager
+  file-icons
+  linter
+  linter-shellcheck
+  )
+
+for PLUGIN in "${PLUGINS[@]}"; do
+  if test ! -d "$HOME/.atom/packages/$PLUGIN"
+  then
+    apm install $PLUGIN
+  fi
+done
