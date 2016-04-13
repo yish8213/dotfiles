@@ -3,8 +3,6 @@ cask_args appdir: '/Applications'
 brew 'bash'
 brew 'bash-completion'
 
-brew 'shellcheck'
-
 # Just for fun
 brew 'fortune', args: ['--without-offensive']
 brew 'cowsay'

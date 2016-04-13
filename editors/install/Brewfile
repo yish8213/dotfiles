@@ -5,3 +5,5 @@ brew 'vim', args: ['--override-system-vi', '--with-python3', '--with-mzscheme', 
 cask 'atom'
 
 cask 'visual-studio-code'
+
+brew 'shellcheck'

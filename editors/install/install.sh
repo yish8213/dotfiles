@@ -5,18 +5,21 @@ brew bundle --file="$THIS_DIR/Brewfile"
 
 
 # Install Atom plugins
-## https://atom.io/packages/sync-settings
-## https://atom.io/packages/auto-update-packages
-## https://atom.io/packages/project-manager
-## https://atom.io/packages/file-icons
-## https://atom.io/packages/linter-shellcheck
 PLUGINS=(
+  AtomicChar
   sync-settings
   auto-update-packages
   project-manager
   file-icons
   linter
+  linter-docker
   linter-shellcheck
+  file-icons
+  minimap
+  expose
+  git-time-machine
+  todo-show
+  terminal-plus
   )
 
 for PLUGIN in "${PLUGINS[@]}"; do
