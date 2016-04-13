@@ -2,3 +2,6 @@
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
 brew bundle --file="$THIS_DIR/Brewfile"
+
+# httpie plugins
+pip install httpie-oauth
