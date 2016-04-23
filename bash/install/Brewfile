@@ -3,7 +3,12 @@ cask_args appdir: '/Applications'
 brew 'bash'
 brew 'bash-completion'
 
+brew 'watch'
+
 # Just for fun
 brew 'fortune', args: ['--without-offensive']
 brew 'cowsay'
 brew 'ponysay'
+
+## See http://haruair.com/blog/3542
+brew 'figlet'
