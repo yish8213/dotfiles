@@ -22,16 +22,6 @@ cask 'appcleaner'
 cask 'bartender'
 cask 'bettertouchtool'
 
-
-# Privacy
-brew 'tor', args: ['--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc']
-brew 'arm'
-cask 'torbrowser'
-
-cask 'gpgtools'
-
-cask '1password'
-
 # Shell
 cask 'iterm2-beta'
 cask 'path-finder'

@@ -1,0 +1,21 @@
+cask_args appdir: '/Applications'
+
+# brew 'dnscrypt-proxy', args: [ '--with-plugins' ]
+
+brew 'tor', args: [ '--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc' ]
+brew 'arm'
+cask 'torbrowser'
+cask 'onionshare'
+cask 'tunnelbear'
+
+brew 'gpg2', args: [ '--with-readline' ]
+cask 'gpgtools'
+
+cask '1password'
+# cask 'lastpass'
+brew 'lastpass-cli'
+
+tap 'homebrew/fuse'
+brew 'encfs'
+
+cask 'veracrypt'
