@@ -14,6 +14,7 @@ PLUGINS=(
   linter
   linter-docker
   linter-shellcheck
+  linter-haproxy
   file-icons
   minimap
   expose

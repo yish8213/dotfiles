@@ -19,6 +19,10 @@ brew 'rmtrash'
 # Development
 cask 'sourcetree'
 cask 'p4merge'
+cask 'beyond-compare'
+
+# tap 'homebrew/gui'
+# brew 'meld'
 
 cask 'tunnelblick'
 
@@ -26,6 +30,7 @@ cask 'redis'
 
 # Databases
 brew 'mysql'
+brew 'mytop'
 cask 'mysqlworkbench'
 
 # Install Cyberduck and its command line interface. See https://duck.sh/
@@ -52,3 +57,5 @@ brew 's3cmd'
 
 # Android
 brew 'android-sdk'
+
+cask 'jet'

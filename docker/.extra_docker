@@ -1,0 +1,4 @@
+alias dockerclean='docker rm $(docker ps -a -q); docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")'
+alias dockerlogin='aws --region=us-east-1 ecr get-login | pbcopy'
+alias dockerstop='docker stop $(docker ps -a -q)'
+alias dockerrm='docker rm $(docker ps -a -q)'
