@@ -4,3 +4,5 @@ brew 'python', args: ['--with-berkeley-db4']
 brew 'python3'
 
 cask 'pycharm'
+
+brew 'pip-completion'

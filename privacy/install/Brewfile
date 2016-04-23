@@ -18,4 +18,4 @@ brew 'lastpass-cli'
 tap 'homebrew/fuse'
 brew 'encfs'
 
-cask 'veracrypt'
+# cask 'veracrypt'

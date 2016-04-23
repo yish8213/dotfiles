@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
 for file in $HOME/bin/*; do
 	[ -r "$file" ] && [ -d "$file" ] && export PATH="$file:$PATH";
 done;
 unset file;
-
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,12 +43,6 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
-
-# Add tab completion for many Homebrew commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/brew_bash_completion.sh" ]; then
-	source "$(brew --prefix)/etc/brew_bash_completion.sh"
-fi;
-
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit

@@ -12,6 +12,7 @@ brew 'gzip'
 brew 'lsof'
 brew 'rsync'
 brew 'colordiff'
+brew 'watch'
 # send files to OSX trash instead of deleting them
 brew 'rmtrash'
 
@@ -57,5 +58,3 @@ brew 's3cmd'
 
 # Android
 brew 'android-sdk'
-
-cask 'jet'

@@ -1,0 +1,71 @@
+cask_args appdir: '/Applications'
+
+brew 'open-completion'
+
+cask 'alfred'
+cask 'cheatsheet'
+cask 'appcleaner'
+
+cask 'bartender'
+cask 'bettertouchtool'
+
+# Shell
+cask 'path-finder'
+cask 'go2shell'
+
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+
+# Office
+cask 'skype'
+# cask 'pdfpenpro'
+
+# Writing
+cask 'marked'
+cask 'markdown-service-tools'
+
+cask 'grammarly'
+
+cask 'microsoft-office'
+
+# Reading
+cask 'ridibooks'
+cask 'skim'
+
+# Backups
+cask 'dropbox'
+cask 'flickr-uploadr'
+cask 'google-photos-backup'
+cask 'gmvault'
+cask 'amazon-cloud-drive'
+cask 'chronosync'
+
+# Multimedia
+cask 'vlc'
+cask 'air-video-server-hd'
+cask 'spotify'
+cask 'edgeview'
+## https://www.google.com/nikcollection/
+## cask 'google-nik-collection'
+# cask 'tvmobili'
+
+cask 'anki'
+cask 'transmission'
+# cask 'webtorrent'
+cask 'parallels-desktop'
+
+# Hardwares
+cask 'logitech-options'
+cask 'scansnap-manager-ix500'
+
+# cask 'paragon-ntfs'
+# cask 'stretchlink'
+# cask 'fluid'
+# cask 'duet'
+# cask 'flux'
+# cask 'onyx'
+# cask 'rescuetime'
+
+# See http://osxdaily.com/2012/12/05/how-to-remove-exif-data-from-images-quickly/
+# cask 'imageoptim'

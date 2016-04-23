@@ -3,7 +3,7 @@ cask_args appdir: '/Applications'
 brew 'bash'
 brew 'bash-completion'
 
-brew 'watch'
+cask 'iterm2-beta'
 
 # Just for fun
 brew 'fortune', args: ['--without-offensive']

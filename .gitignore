@@ -1,3 +1,4 @@
 not-shared
 java/.gradle
 *.log
+.DS_Store
