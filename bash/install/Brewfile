@@ -12,3 +12,10 @@ brew 'ponysay'
 
 ## See http://haruair.com/blog/3542
 brew 'figlet'
+
+
+## See https://hashnode.com/post/what-are-your-top-cli-tools-hacks-for-productivity-cinov8y4w00njxh53j2w9wfy4
+# brew 'z'
+brew 'autojump'
+
+brew 'ranger'
