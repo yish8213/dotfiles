@@ -4,3 +4,4 @@ brew 'git', args: ['--with-blk-sha1', '--with-brewed-curl', '--with-brewed-opens
 
 brew 'git-lfs'
 brew 'git-flow'
+brew 'git-extras'

@@ -12,10 +12,11 @@ brew 'gpg2', args: [ '--with-readline' ]
 cask 'gpgtools'
 
 cask '1password'
-# cask 'lastpass'
-brew 'lastpass-cli'
+cask 'lastpass'
+# brew 'lastpass-cli', args: [ '--with-doc', '--with-pinentry' ]
 
 tap 'homebrew/fuse'
 brew 'encfs'
+# brew 'sshfs'
 
 # cask 'veracrypt'
