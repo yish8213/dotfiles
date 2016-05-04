@@ -58,7 +58,7 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
   source "$(brew --prefix)/etc/profile.d/z.sh"
 fi;
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . "$(brew --prefix)/etc/profile.d/autojump.sh"
 
 
 # Just for fun
