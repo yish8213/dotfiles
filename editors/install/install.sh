@@ -29,3 +29,14 @@ for PLUGIN in "${PLUGINS[@]}"; do
     apm install $PLUGIN
   fi
 done
+
+# Install Vim plugins
+VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
+if test ! -d "$VUNDLE_DIR"
+then
+  git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
+else
+  pushd "$VUNDLE_DIR" && git pull && popd
+fi
+
+vim +PluginInstall +PluginUpdate +PluginClean +qall
