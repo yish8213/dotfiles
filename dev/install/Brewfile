@@ -30,6 +30,8 @@ cask 'tunnelblick'
 
 cask 'redis'
 
+brew 'lnav', args: ['----with-curl']
+
 # Databases
 brew 'mysql'
 brew 'mytop'
