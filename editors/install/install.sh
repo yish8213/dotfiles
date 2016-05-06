@@ -21,6 +21,9 @@ PLUGINS=(
   git-time-machine
   todo-show
   terminal-plus
+  recent-files-fuzzy-finder
+  zentabs
+  language-markdown
   )
 
 for PLUGIN in "${PLUGINS[@]}"; do
