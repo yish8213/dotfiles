@@ -21,4 +21,6 @@ else
   pushd "$VUNDLE_DIR" && git pull && popd
 fi
 
-vim +PluginInstall +PluginUpdate +PluginClean +qall
+# Workaround
+## See https://github.com/VundleVim/Vundle.vim/issues/511
+echo | echo | vim +PluginInstall +PluginUpdate +PluginClean +qall &>/dev/null
