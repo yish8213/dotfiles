@@ -18,7 +18,7 @@ Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
 Plugin 'ekalinin/dockerfile.vim'
-'''
+```
 
 Just comment it out if you find the plugin you do not want to install.
 
