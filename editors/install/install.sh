@@ -5,33 +5,12 @@ brew bundle --file="$THIS_DIR/Brewfile"
 
 
 # Install Atom plugins
-PLUGINS=(
-  AtomicChar
-  sync-settings
-  auto-update-packages
-  project-manager
-  file-icons
-  linter
-  linter-docker
-  linter-shellcheck
-  linter-haproxy
-  file-icons
-  minimap
-  expose
-  git-time-machine
-  todo-show
-  terminal-plus
-  recent-files-fuzzy-finder
-  zentabs
-  language-markdown
-  )
-
-for PLUGIN in "${PLUGINS[@]}"; do
+while IFS='' read -r PLUGIN || [[ -n "$PLUGIN" ]]; do
   if test ! -d "$HOME/.atom/packages/$PLUGIN"
   then
     apm install $PLUGIN
   fi
-done
+done < "$THIS_DIR/atom-packages.txt"
 
 # Install Vim plugins
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
