@@ -2,7 +2,6 @@ AtomicChar
 activate-power-mode
 advanced-open-file
 atom-beautify
-atom-markdown-katex
 atom-material-contrast-syntax
 atom-material-syntax
 atom-material-syntax-dark
@@ -17,7 +16,6 @@ editorconfig
 emmet
 ex-mode
 expose
-external-open
 file-icons
 file-types
 file-watcher
@@ -30,7 +28,6 @@ icon-fonts
 image-copipe
 language-diff
 language-docker
-language-dotfiles
 language-dots
 language-fish-shell
 language-haproxy
@@ -80,5 +77,3 @@ vim-mode
 vim-mode-zz
 vim-surround
 zentabs
-
-
