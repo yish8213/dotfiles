@@ -54,3 +54,25 @@ apm list --bare --installed | cut -d @ -f1 > atom-packages.txt
 ```
 
  Just delete the line from the `atom-packages.txt` file if you find the plugin you do not want to install.
+
+#### [`linter-markdown`](https://atom.io/packages/linter-markdown)
+
+`linter-markdown` uses [`remark-lint`](https://github.com/wooorm/remark-lint) behind the scene and `remark-lint` can be customised by using `${HOME}/.remarkrc`:
+
+```json
+{
+  "plugins": {
+    "lint": {
+      "no-multiple-toplevel-headings": false,
+      "no-duplicate-headings": false,
+      "list-item-indent": false,
+      "maximum-line-length": false,
+      "no-html": false
+    }
+  },
+  "settings": {
+    "commonmark": true,
+    "gfm": true
+  }
+}
+```
