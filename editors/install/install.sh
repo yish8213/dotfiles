@@ -12,6 +12,9 @@ while IFS='' read -r PLUGIN || [[ -n "$PLUGIN" ]]; do
   fi
 done < "$THIS_DIR/atom-packages.txt"
 
+# Create some folders so that `.vimrc` works
+mkdir -p $HOME/.vim/files/{backup,swap,undo,info}
+
 # Install Vim plugins
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
 if test ! -d "$VUNDLE_DIR"
