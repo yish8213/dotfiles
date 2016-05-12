@@ -1,7 +1,32 @@
 #!/usr/bin/env bash
 
-alias dockerclean='docker rm $(docker ps -a -q); docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")'
-alias dockercleanall='docker rm $(docker ps -a -q); docker rmi $(docker images -a | awk "{print $3}")'
-alias dockerlogin='aws --region=us-east-1 ecr get-login | pbcopy && echo "Command is pasted into the clipboard!"'
+# Remove all images without tags
+function dockerrmi() {
+  for IMAGE in $(docker images -a | grep "^<none>" | awk '{print $3}'); do
+      docker rmi ${IMAGE}
+  done
+  unset ${IMAGE}
+}
+
+# Remove all images
+function dockerrmiall() {
+  for IMAGE in $(docker images -a | awk '{print $3}'); do
+      docker rmi ${IMAGE}
+  done
+  unset ${IMAGE}
+}
+
+# Stop all containers
 alias dockerstop='docker stop $(docker ps -a -q)'
-alias dockerrm='docker rm $(docker ps -a -q)'
+
+# Stop and remove all containers
+alias dockerrm='dockerstop; docker rm $(docker ps -a -q)'
+
+# Stop and remove all containers and then remove all the images without tags
+alias dockerclean='dockerrm; dockerrmi'
+
+# Stop and remove all containers and then remove all the images
+alias dockercleanall='dockerrm; dockerrmiall'
+
+# Get and copy Docker login command for AWS ECR into the clipboard
+alias dockerlogin='aws --region=us-east-1 ecr get-login | pbcopy && echo "Command is pasted into the clipboard!"'
