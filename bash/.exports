@@ -1,5 +1,5 @@
-# Make vim the default editor.
-export EDITOR='vim';
+# Make emacs the default editor.
+export EDITOR='emacs';
 
 # Enable persistent REPL history for `node`.
 NODE_REPL_HISTORY_FILE=~/.node_history;
@@ -14,7 +14,6 @@ export HISTCONTROL='ignoreboth';
 
 # Leave the timestamp. See http://snoopybox.co.kr/1698
 export HISTTIMEFORMAT='%F %T '
-
 
 # Prefer Korean and use UTF-8.
 export LANG='ko_KR.UTF-8';

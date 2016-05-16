@@ -20,7 +20,7 @@ source "$THIS_DIR/.config"
 ## Ref: https://github.com/holman/dotfiles/blob/master/homebrew/install.sh
 if test ! $(which brew)
 then
-  echo "  Installing Homebrew for you."
+  echo "Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
@@ -47,12 +47,10 @@ brew bundle
 ## Ref: https://github.com/holman/dotfiles/blob/master/script/install
 find . -name install.sh | while read installer ; do sh -c "chmod +x ${installer} && ${installer}" ; done
 
-
 # Remove outdated versions from the cellar.
 brew cleanup
 
 brew cask cleanup
-
 
 # Run GNU Stow
 # Treat the personal configurations first
@@ -60,13 +58,12 @@ if [ -f "$THIS_DIR/not-shared" ]; then
   stow --restow --target="$HOME" --ignore="install*" "not-shared"
 fi
 
-dirlist=$(find . -mindepth 1 -maxdepth 1 -type d -not  \( -path "./.*" \) | awk -F/ '{print $NF}')
+dirlist=$(find . -mindepth 1 -maxdepth 1 -type d -not \( -path "./.*" \) | awk -F/ '{print $NF}')
 
 for dir in $dirlist
 do
-  (
-  stow --restow --target="$HOME" --ignore="install*" "$dir"
-  )
+  (stow --restow --target="$HOME" --ignore="install*" "$dir")
 done
+
 unset dirlist;
 unset dir;

@@ -1,25 +1,19 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/completions'
+tap 'caskroom/versions'
+tap 'pivotal/tap'
 
 # Java development
-cask 'java' unless system '/usr/libexec/java_home --failfast'
+#cask 'java'
+#cask 'intellij-idea'
 
-tap 'caskroom/versions'
-cask 'java7'
-
-cask 'intellij-idea'
+brew 'groovy', args: ['--with-invokedynamic']
+brew 'gradle'
 
 brew 'maven'
 brew 'maven-completion'
 
-brew 'gradle'
-brew 'groovy', args: ['--with-invokedynamic']
-
-brew 'jmeter', args: ['--with-plugins']
-
-# Install Spring Boot
-tap 'pivotal/tap'
 brew 'springboot'
 
-brew 'spring-completion'
+brew 'jmeter', args: ['--with-plugins']

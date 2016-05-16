@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
 THIS_SHELL='zsh'

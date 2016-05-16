@@ -1,6 +1,0 @@
-source ~/.vimrc
-
-set surround
-
-map \r :action ReformatCode<CR>
-map \o :action OptimizeImports<CR>

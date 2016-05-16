@@ -11,7 +11,6 @@ cask 'cakebrew'
 
 brew 'stow'
 
-
 # Utils
 brew 'p7zip'
 brew 'testdisk'

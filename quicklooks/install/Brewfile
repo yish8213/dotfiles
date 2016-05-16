@@ -1,34 +1,18 @@
 cask_args appdir: '/Applications'
 
-# See https://github.com/sindresorhus/quick-look-plugins
-
-# ref: https://github.com/toland/qlmarkdown
-cask 'qlmarkdown'
-
-# Install Markdown Quicklook
-# ref: https://github.com/toland/qlmarkdown
-cask 'qlmarkdown'
-
-# Install other Quicklook plugins
+# Install Quicklook plugins
 # ref: https://github.com/sindresorhus/quick-look-plugins
-cask 'quicklook-csv'
-
-cask 'quicklook-json'
 
 cask 'qlcolorcode'
-
 cask 'qlstephen'
-
+cask 'qlmarkdown'
+cask 'quicklook-json'
 cask 'qlprettypatch'
-
+cask 'quicklook-csv'
 cask 'betterzipql'
-
 cask 'qlimagesize'
-
 cask 'webpquicklook'
-
 cask 'suspicious-package'
-
 cask 'provisionql'
 
 # Install QuickLook render plugin for ReST (ReStructuredText) files.

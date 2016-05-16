@@ -2,12 +2,5 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/completions'
 
-# cask 'dockertoolbox'
-
 brew 'docker-completion'
 brew 'docker-compose-completion'
-brew 'docker-machine-completion'
-
-cask 'jet'
-brew 'kubectl'
-brew 'fleetctl'

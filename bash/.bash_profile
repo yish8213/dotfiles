@@ -44,25 +44,11 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults;
-
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal" killall;
 
+# iTerm2 may be integrated with the unix shell so that it can keep track of your command history, current working directory, host name, and more--even over ssh. This enables several useful features.
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# See https://hashnode.com/post/what-are-your-top-cli-tools-hacks-for-productivity-cinov8y4w00njxh53j2w9wfy4
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
-  source "$(brew --prefix)/etc/profile.d/z.sh"
-fi;
-
+# autojump is a faster way to navigate your filesystem. It works by maintaining a database of the directories you use the most from the command line.
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . "$(brew --prefix)/etc/profile.d/autojump.sh"
-
-
-# Just for fun
-# http://haruair.com/blog/3521
-if [ -e $(which fortune) ] && [ -e $(which cowsay) ]; then
-	fortune | cowsay
-fi

@@ -3,7 +3,7 @@
 You should clone the repository to your home directory. [GNU Stow is not going to work if you clone this to somewhere and create the symbolic link to it](https://unix.stackexchange.com/questions/246983/can-gnu-stow-use-a-stow-directory-that-is-a-symbolic-link).
 
 ```bash
-git clone https://github.com/andromedarabbit/dotfiles.git "$HOME" && cd "$HOME/dotfiles" && ./bootstrap.sh
+git clone https://github.com/yish8213/dotfiles.git "$HOME" && cd "$HOME/dotfiles" && ./bootstrap.sh
 ```
 
 That's it!

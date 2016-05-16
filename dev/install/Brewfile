@@ -1,64 +1,40 @@
 cask_args appdir: '/Applications'
 
+tap 'homebrew/dupes'
+
 # GNU tools
 ## See https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
-brew 'coreutils', args: ['--with-gmp']
-
-tap 'homebrew/dupes'
+brew 'coreutils'
 brew 'gnu-tar', args: ['—-with-default-names']
 brew 'gnu-which', args: ['—-with-default-names']
 brew 'grep', args: ['-—with-default-names']
 brew 'gzip'
 brew 'lsof'
-brew 'less', args: ['--with-pcre']
+brew 'less'
 brew 'rsync'
 brew 'colordiff'
 brew 'watch'
 brew 'awk'
+
 # send files to OSX trash instead of deleting them
 brew 'rmtrash'
-
 
 # Development
 cask 'sourcetree'
 cask 'p4merge'
-cask 'beyond-compare'
+brew 'lnav'
 
-# tap 'homebrew/gui'
-# brew 'meld'
-
-cask 'tunnelblick'
-
-cask 'redis'
-
-brew 'lnav', args: ['----with-curl']
+# Network
+cask 'osxfuse'
+cask 'cyberduck'
+## See http://blog.outsider.ne.kr/1159
+cask 'ngrok'
+## aria2 is a lightweight multi-protocol & multi-source command-line download utility
+brew 'aria2'
+brew 'duck'
 
 # Databases
 brew 'mysql'
 brew 'mytop'
 cask 'mysqlworkbench'
-
-# Install Cyberduck and its command line interface. See https://duck.sh/
-cask 'cyberduck'
-brew 'duck'
-
-# Install the download accelerator
-brew 'axel'
-brew 'aria2'
-
-# See http://blog.outsider.ne.kr/1159
-brew 'ngrok'
-
-# See https://stackoverflow.com/questions/2925606/how-to-create-a-cpu-spike-with-a-bash-command
-brew 'stress'
-
-# See https://github.com/jkbrzt/httpie-oauth
-brew 'httpie'
-
-cask 'sshfs'
-brew 's3cmd'
-
-# cask 'manopen'
-
-# Android
-brew 'android-sdk'
+cask 'redis'

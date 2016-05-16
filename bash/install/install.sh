@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-#
-# ref: [Upgrade to bash 4 in Mac OS X](http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/)
 
+# ref: [Upgrade to bash 4 in Mac OS X](http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/)
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
 THIS_SHELL='bash'

@@ -2,71 +2,40 @@ cask_args appdir: '/Applications'
 
 brew 'open-completion'
 
-cask 'alfred'
+# Usability
 cask 'cheatsheet'
-cask 'appcleaner'
-
-cask 'bartender'
-cask 'bettertouchtool'
-
-# Shell
-cask 'path-finder'
-cask 'go2shell'
 
 # Browsers
-cask 'firefox'
+cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 
-# Office
-cask 'skype'
-# cask 'pdfpenpro'
-
 # Writing
-cask 'marked'
+cask 'scrivener'
+cask 'grammarly'
+cask 'evernote'
 cask 'markdown-service-tools'
 
-cask 'grammarly'
-
-cask 'microsoft-office'
-
 # Reading
-cask 'ridibooks'
 cask 'skim'
 
 # Backups
 cask 'dropbox'
-cask 'flickr-uploadr'
-cask 'google-photos-backup'
-cask 'gmvault'
-cask 'amazon-cloud-drive'
-cask 'chronosync'
+cask 'google-drive'
 
 # Multimedia
 cask 'vlc'
-cask 'air-video-server-hd'
-cask 'spotify'
-cask 'edgeview'
-## https://www.google.com/nikcollection/
-## cask 'google-nik-collection'
-# cask 'tvmobili'
-
 cask 'anki'
+cask 'skitch'
+
+# Chat
+cask 'slack'
+cask 'telegram'
+cask 'limechat'
+
+# Utilities
+cask 'vmware-fusion'
+cask 'cleanmymac'
 cask 'transmission'
-# cask 'webtorrent'
-cask 'parallels-desktop'
-cask 'bluestacks'
 
 # Hardwares
 cask 'logitech-options'
-cask 'scansnap-manager-ix500'
-
-# cask 'paragon-ntfs'
-# cask 'stretchlink'
-# cask 'fluid'
-# cask 'duet'
-# cask 'flux'
-# cask 'onyx'
-# cask 'rescuetime'
-
-# See http://osxdaily.com/2012/12/05/how-to-remove-exif-data-from-images-quickly/
-# cask 'imageoptim'
