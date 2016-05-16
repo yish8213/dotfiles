@@ -9,6 +9,7 @@ git clone https://github.com/yish8213/dotfiles.git "$HOME" && cd "$HOME/dotfiles
 That's it!
 
 ## Thanks to…
+- [andromedarabbit/dotfiles](https://github.com/andromedarabbit/dotfiles)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [xero/dotfiles](https://github.com/xero/dotfiles)
 - [dotfiles.github.io](http://dotfiles.github.io/): Your unofficial guide to dotfiles on GitHub.

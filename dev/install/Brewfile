@@ -38,3 +38,6 @@ brew 'mysql'
 brew 'mytop'
 cask 'mysqlworkbench'
 cask 'redis'
+
+# Virtual machines
+cask 'vmware-fusion'

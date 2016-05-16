@@ -2,8 +2,9 @@ cask_args appdir: '/Applications'
 
 brew 'open-completion'
 
-# Usability
+# Convenience
 cask 'cheatsheet'
+cask 'cleanmymac'
 
 # Browsers
 cask 'firefoxdeveloperedition'
@@ -12,30 +13,29 @@ cask 'google-chrome'
 # Writing
 cask 'scrivener'
 cask 'grammarly'
-cask 'evernote'
 cask 'markdown-service-tools'
+
+# Idea theorem
+cask 'anki'
+cask 'evernote'
+cask 'skitch'
 
 # Reading
 cask 'skim'
 
-# Backups
+# Cloud drives
 cask 'dropbox'
 cask 'google-drive'
 
 # Multimedia
 cask 'vlc'
-cask 'anki'
-cask 'skitch'
+cask 'transmission'
 
 # Chat
 cask 'slack'
 cask 'telegram'
 cask 'limechat'
-
-# Utilities
-cask 'vmware-fusion'
-cask 'cleanmymac'
-cask 'transmission'
+cask 'skype'
 
 # Hardwares
 cask 'logitech-options'

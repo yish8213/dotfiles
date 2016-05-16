@@ -1,0 +1,10 @@
+cask_args appdir: '/Applications'
+
+# Compression
+brew 'p7zip'
+
+# Recovery
+brew 'testdisk'
+
+# Markdown
+brew 'commonmark'
