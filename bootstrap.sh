@@ -49,9 +49,11 @@ find . -name install.sh | while read installer;
   do sh -c "chmod +x ${installer} && ${installer}";
 done
 
+brew linkapps
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cask cleanup
+brew prune
 
 # Run GNU Stow
 # Treat the personal configurations first
