@@ -4,11 +4,12 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; 
+  do sudo -n true; sleep 60; kill -0 "$$" || exit; 
+done 2>/dev/null &
 
 # Load the configurations
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
-
 source "$THIS_DIR/.config"
 
 # Homebrew
@@ -40,30 +41,29 @@ brew update && brew upgrade --all
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 brew tap Homebrew/bundle
-
 brew bundle
 
 # Find the installers and run them iteratively
 ## Ref: https://github.com/holman/dotfiles/blob/master/script/install
-find . -name install.sh | while read installer ; do sh -c "chmod +x ${installer} && ${installer}" ; done
+find . -name install.sh | while read installer;
+  do sh -c "chmod +x ${installer} && ${installer}";
+done
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
 brew cask cleanup
 
 # Run GNU Stow
 # Treat the personal configurations first
-if [ -f "$THIS_DIR/not-shared" ]; then
+if [ -f "$THIS_DIR/not-shared" ]; 
+then
   stow --restow --target="$HOME" --ignore="install*" "not-shared"
 fi
 
-dirlist=$(find . -mindepth 1 -maxdepth 1 -type d -not \( -path "./.*" \) | awk -F/ '{print $NF}')
-
+dirlist=$(find . -mindepth 1 -maxdepth 1 -type d ! -path "./.*" | awk -F'/' '{print $NF}')
 for dir in $dirlist
 do
-  (stow --restow --target="$HOME" --ignore="install*" "$dir")
+  stow --restow --target="$HOME" --ignore="install*" "$dir"
 done
-
 unset dirlist;
 unset dir;

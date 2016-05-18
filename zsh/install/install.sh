@@ -7,7 +7,7 @@ THIS_SHELL_PATH="/usr/local/bin/$THIS_SHELL"
 if test ! -f "$THIS_SHELL_PATH"
 then
   # Install Zsh shell.
-  brew bundle --file="$THIS_DIR/Brewfile"
+  brew bundle --verbose --file="$THIS_DIR/Brewfile"
 
   # Add the new shell to the list of allowed shells
   sudo bash -c "echo $THIS_SHELL_PATH >> /etc/shells"

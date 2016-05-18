@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/y1sh/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-extras git-flow docker docker-compose gradle mvn node npm osx)
+plugins=(brew git git-extras git-flow docker docker-compose gradle mvn node npm osx autojump nyan)
 
 # User configuration
 
@@ -83,4 +83,17 @@ export LANG=ko_KR.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# Add `~/bin` to the `$PATH`
+for file in $HOME/bin/*; do
+	[ -r "$file" ] && [ -d "$file" ] && export PATH="$file:$PATH";
+done;
+unset file;
+
+# Every ~/.extra* files are being sourced.
+for extra in $(find $HOME -mindepth 1 -maxdepth 1 \( -type f -o -type l \) -name ".extra*"); do
+	source "$extra";
+done;
+unset extra;
+
+# iTerm2 may be integrated with the unix shell so that it can keep track of your command history, current working directory, host name, and more--even over ssh. This enables several useful features.
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
