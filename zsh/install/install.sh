@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
-THIS_SHELL='zsh'
+THIS_SHELL="zsh"
 THIS_SHELL_PATH="/usr/local/bin/$THIS_SHELL"
+OH_MY_ZSH_PATH="$HOME/.oh-my-zsh"
 
-if test ! -f "$THIS_SHELL_PATH"
+if test ! -f "$THIS_SHELL_PATH" && test ! -d "$OH_MY_ZSH_PATH"
 then
   # Install Zsh shell.
   brew bundle --verbose --file="$THIS_DIR/Brewfile"
 
   # Add the new shell to the list of allowed shells
   sudo bash -c "echo $THIS_SHELL_PATH >> /etc/shells"
+  
+  # Clone the oh-my-zsh repository
+  git clone "git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH_PATH"
 fi
 
 # Change to the new shell
