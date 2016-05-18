@@ -8,7 +8,7 @@ tap 'pivotal/tap'
 cask 'java'
 cask 'intellij-idea'
 
-brew 'groovy', args: ['--with-invokedynamic']
+brew 'groovy', args: ['with-invokedynamic']
 brew 'gradle'
 
 brew 'maven'
@@ -16,4 +16,4 @@ brew 'maven-completion'
 
 brew 'springboot'
 
-brew 'jmeter', args: ['--with-plugins']
+brew 'jmeter', args: ['with-plugins']

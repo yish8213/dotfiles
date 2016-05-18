@@ -5,9 +5,9 @@ cask 'onionshare'
 cask 'gpgtools'
 cask 'lastpass'
 
-brew 'tor', args: [ '--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc' ]
+brew 'tor', args: [ 'with-libnatpmp', 'with-libscrypt', 'with-miniupnpc' ]
 brew 'arm'
-brew 'gpg2', args: [ '--with-readline' ]
+brew 'gpg2', args: [ 'with-readline' ]
 
 tap 'homebrew/fuse'
 brew 'encfs'
