@@ -1,14 +1,13 @@
 cask_args appdir: '/Applications'
 
-brew 'tor', args: [ '--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc' ]
-brew 'arm'
 cask 'torbrowser'
 cask 'onionshare'
-
-brew 'gpg2', args: [ '--with-readline' ]
 cask 'gpgtools'
-
 cask 'lastpass'
+
+brew 'tor', args: [ '--with-libnatpmp', '--with-libscrypt', '--with-miniupnpc' ]
+brew 'arm'
+brew 'gpg2', args: [ '--with-readline' ]
 
 tap 'homebrew/fuse'
 brew 'encfs'

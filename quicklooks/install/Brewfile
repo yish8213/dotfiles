@@ -2,7 +2,6 @@ cask_args appdir: '/Applications'
 
 # Install Quicklook plugins
 # ref: https://github.com/sindresorhus/quick-look-plugins
-
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'

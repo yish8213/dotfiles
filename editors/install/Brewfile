@@ -1,9 +1,7 @@
 cask_args appdir: '/Applications'
 
 cask 'atom'
-
 cask 'visual-studio-code'
 
 brew 'emacs'
-
 brew 'shellcheck'

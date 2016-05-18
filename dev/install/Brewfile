@@ -4,13 +4,13 @@ tap 'homebrew/dupes'
 
 # GNU tools
 ## See https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
-brew 'coreutils'
+brew 'coreutils', args: ['—-with-gmp']
 brew 'gnu-tar', args: ['—-with-default-names']
 brew 'gnu-which', args: ['—-with-default-names']
 brew 'grep', args: ['-—with-default-names']
 brew 'gzip'
 brew 'lsof'
-brew 'less'
+brew 'less', args: ['-—with-pcre']
 brew 'rsync'
 brew 'colordiff'
 brew 'watch'
@@ -22,22 +22,15 @@ brew 'rmtrash'
 # Development
 cask 'sourcetree'
 cask 'p4merge'
-brew 'lnav'
+brew 'lnav', args: ['-—with-curl']
 
 # Network
-cask 'osxfuse'
-cask 'cyberduck'
 ## See http://blog.outsider.ne.kr/1159
 cask 'ngrok'
-## aria2 is a lightweight multi-protocol & multi-source command-line download utility
-brew 'aria2'
-brew 'duck'
 
 # Databases
-brew 'mysql'
 brew 'mytop'
 cask 'mysqlworkbench'
-cask 'redis'
 
 # Virtual machines
 cask 'vmware-fusion'

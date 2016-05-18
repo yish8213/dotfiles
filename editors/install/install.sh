@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
-brew bundle --file="$THIS_DIR/Brewfile"
+brew bundle --verbose --file="$THIS_DIR/Brewfile"
 
 # Install Atom plugins
 while IFS='' read -r PLUGIN || [[ -n "$PLUGIN" ]]; do

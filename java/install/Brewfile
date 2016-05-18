@@ -5,8 +5,8 @@ tap 'caskroom/versions'
 tap 'pivotal/tap'
 
 # Java development
-#cask 'java'
-#cask 'intellij-idea'
+cask 'java'
+cask 'intellij-idea'
 
 brew 'groovy', args: ['--with-invokedynamic']
 brew 'gradle'
