@@ -29,7 +29,6 @@ image-copipe
 language-diff
 language-docker
 language-dots
-language-fish-shell
 language-haproxy
 language-hombrew-formula
 language-ignore

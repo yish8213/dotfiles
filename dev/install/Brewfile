@@ -29,6 +29,7 @@ brew 'lnav', args: ['with-curl']
 cask 'ngrok'
 
 # Databases
+brew 'mysql'
 brew 'mytop'
 cask 'mysqlworkbench'
 
