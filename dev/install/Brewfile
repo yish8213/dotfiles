@@ -32,6 +32,3 @@ cask 'ngrok'
 brew 'mysql'
 brew 'mytop'
 cask 'mysqlworkbench'
-
-# Virtual machines
-cask 'vmware-fusion'
