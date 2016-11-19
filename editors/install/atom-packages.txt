@@ -1,4 +1,3 @@
-AtomicChar
 activate-power-mode
 advanced-open-file
 atom-beautify
@@ -62,7 +61,6 @@ project-manager
 recent-files-fuzzy-finder
 release-notes
 remember-file-positions
-remote-edit
 ssh-config
 sync-settings
 terminal-plus
