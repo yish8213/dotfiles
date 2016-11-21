@@ -14,7 +14,7 @@ brew 'less', args: ['with-pcre']
 brew 'rsync'
 brew 'colordiff'
 brew 'watch'
-brew 'awk'
+brew 'gawk'
 
 # send files to OSX trash instead of deleting them
 brew 'rmtrash'
