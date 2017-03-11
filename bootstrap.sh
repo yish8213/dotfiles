@@ -4,8 +4,8 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; 
-  do sudo -n true; sleep 60; kill -0 "$$" || exit; 
+while true;
+  do sudo -n true; sleep 60; kill -0 "$$" || exit;
 done 2>/dev/null &
 
 # Load the configurations
@@ -49,7 +49,6 @@ find . -name install.sh | while read installer;
   do sh -c "chmod +x ${installer} && ${installer}";
 done
 
-brew linkapps
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cask cleanup
@@ -57,7 +56,7 @@ brew prune
 
 # Run GNU Stow
 # Treat the personal configurations first
-if [ -f "$THIS_DIR/not-shared" ]; 
+if [ -f "$THIS_DIR/not-shared" ];
 then
   stow --restow --target="$HOME" --ignore="install*" "not-shared"
 fi
