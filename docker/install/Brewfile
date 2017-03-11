@@ -4,3 +4,5 @@ tap 'homebrew/completions'
 
 brew 'docker-completion'
 brew 'docker-compose-completion'
+
+cask 'docker'

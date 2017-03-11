@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 # Compression
 brew 'p7zip'
+cask 'the-unarchiver'
 
 # Recovery
 brew 'testdisk'
@@ -17,3 +18,6 @@ cask 'cyberduck'
 brew 'duck'
 ## aria2 is a lightweight multi-protocol & multi-source command-line download utility
 brew 'aria2', args: ['with-libssh2']
+
+# send files to OSX trash instead of deleting them
+brew 'rmtrash'

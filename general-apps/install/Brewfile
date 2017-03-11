@@ -7,7 +7,6 @@ cask 'cheatsheet'
 cask 'cleanmymac'
 
 # Browsers
-cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 
 # Writing

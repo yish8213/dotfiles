@@ -16,12 +16,9 @@ brew 'colordiff'
 brew 'watch'
 brew 'gawk'
 
-# send files to OSX trash instead of deleting them
-brew 'rmtrash'
-
 # Development
 cask 'sourcetree'
-cask 'p4merge'
+cask 'beyond-compare'
 brew 'lnav', args: ['with-curl']
 
 # Network
