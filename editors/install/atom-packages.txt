@@ -29,7 +29,6 @@ language-diff
 language-docker
 language-dots
 language-haproxy
-language-hombrew-formula
 language-ignore
 language-ini
 language-log
