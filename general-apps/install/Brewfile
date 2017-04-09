@@ -4,7 +4,6 @@ brew 'open-completion'
 
 # Convenience
 cask 'cheatsheet'
-cask 'cleanmymac'
 
 # Browsers
 cask 'google-chrome'
@@ -35,6 +34,3 @@ cask 'slack'
 cask 'telegram'
 cask 'limechat'
 cask 'skype'
-
-# Hardwares
-cask 'logitech-options'
