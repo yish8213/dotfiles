@@ -47,7 +47,6 @@ markdown-deluxe
 markdown-folder
 markdown-preview-opener
 markdown-preview-plus
-markdown-scroll-sync
 markdown-toc
 markdown-url-extract
 markdown-writer
