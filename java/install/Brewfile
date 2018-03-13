@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/completions'
 tap 'caskroom/versions'
 tap 'pivotal/tap'
 

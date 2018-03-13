@@ -1,7 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/completions'
-
 brew 'docker-completion'
 brew 'docker-compose-completion'
 

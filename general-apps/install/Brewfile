@@ -23,7 +23,7 @@ cask 'skim'
 
 # Cloud drives
 cask 'dropbox'
-cask 'google-drive'
+cask 'google-drive-file-stream'
 
 # Multimedia
 cask 'vlc'

@@ -35,7 +35,7 @@ then
 fi
 
 # Upgrade all the existing packages
-brew update && brew upgrade --all
+brew update && brew upgrade
 
 # Install the packages described in `Brewfile`
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"

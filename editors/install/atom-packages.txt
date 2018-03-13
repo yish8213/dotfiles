@@ -42,8 +42,6 @@ linter-docker
 linter-haproxy
 linter-markdown
 linter-shellcheck
-markdown-deluxe
-markdown-folder
 markdown-preview-opener
 markdown-preview-plus
 markdown-toc
