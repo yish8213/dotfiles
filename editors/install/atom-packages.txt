@@ -38,6 +38,7 @@ language-puppet
 language-sql-mysql
 language-viml
 linter
+linter-ui-default
 linter-docker
 linter-haproxy
 linter-markdown
@@ -69,3 +70,5 @@ vim-mode
 vim-mode-zz
 vim-surround
 zentabs
+intentions
+busy-signal
