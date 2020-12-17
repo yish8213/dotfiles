@@ -1,7 +1,0 @@
-cask_args appdir: '/Applications'
-
-cask 'virtualbox'
-
-cask 'vagrant'
-cask 'vagrant-manager'
-brew 'vagrant-completion'

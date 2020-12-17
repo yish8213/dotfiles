@@ -2,13 +2,13 @@ cask_args appdir: '/Applications'
 
 # GNU tools
 ## See https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
-brew 'coreutils', args: ['with-gmp']
-brew 'gnu-tar', args: ['with-default-names']
-brew 'gnu-which', args: ['with-default-names']
-brew 'grep', args: ['with-default-names']
+brew 'coreutils'
+brew 'gnu-tar'
+brew 'gnu-which'
+brew 'grep'
 brew 'gzip'
 brew 'lsof'
-brew 'less', args: ['with-pcre']
+brew 'less'
 brew 'rsync'
 brew 'colordiff'
 brew 'watch'
@@ -18,12 +18,3 @@ brew 'gawk'
 cask 'sourcetree'
 cask 'beyond-compare'
 brew 'lnav'
-
-# Network
-## See http://blog.outsider.ne.kr/1159
-cask 'ngrok'
-
-# Databases
-brew 'mysql'
-brew 'mytop'
-cask 'mysqlworkbench'

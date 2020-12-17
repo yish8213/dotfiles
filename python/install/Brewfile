@@ -1,4 +1,4 @@
 cask_args appdir: '/Applications'
 
-brew 'python3', args: [ 'with-tcl-tk' ]
+brew 'python3'
 brew 'pip-completion'

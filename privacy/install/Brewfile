@@ -1,13 +1,7 @@
 cask_args appdir: '/Applications'
 
-cask 'torbrowser'
-cask 'onionshare'
 cask 'lastpass'
 cask 'tunnelblick'
 cask 'keybase'
 
-brew 'tor', args: [ 'with-libscrypt' ]
-brew 'arm'
-brew 'gpg2', args: [ 'with-readline' ]
-
-brew 'encfs'
+brew 'gpg2'

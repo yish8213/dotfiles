@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-brew 'git', args: ['with-blk-sha1', 'with-curl', 'with-openssl', 'with-subversion', 'with-gettext', 'with-pcre2', 'with-persistent-https']
+brew 'git'
 brew 'git-lfs'
 brew 'git-flow'
 brew 'git-extras'

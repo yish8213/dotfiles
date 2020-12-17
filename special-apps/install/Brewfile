@@ -10,14 +10,8 @@ brew 'testdisk'
 # Markdown
 brew 'commonmark'
 
-# File systems
-cask 'osxfuse'
-
 # File transfer
 cask 'cyberduck'
 
 ## aria2 is a lightweight multi-protocol & multi-source command-line download utility
-brew 'aria2', args: ['with-libssh2']
-
-# send files to OSX trash instead of deleting them
-brew 'rmtrash'
+brew 'aria2'

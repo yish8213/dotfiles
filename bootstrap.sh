@@ -22,16 +22,7 @@ source "$THIS_DIR/.config"
 if test ! $(which brew)
 then
   echo "Installing Homebrew for you."
-
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
-  fi
-
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Upgrade all the existing packages
@@ -51,8 +42,6 @@ done
 
 # Remove outdated versions from the cellar.
 brew cleanup
-brew cask cleanup
-brew prune
 
 # Run GNU Stow
 # Treat the personal configurations first

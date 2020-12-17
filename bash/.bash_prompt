@@ -1,8 +1,0 @@
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# ref: http://charles.lescampeurs.org/2008/05/07/automatically-set-title-on-iterm-tabs
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
-
-# ref: http://twistedcode.org/tutorial/shell/customizing-bash-prompt/
-PS1='\[\033[01;32m\]\u\[\033[01;34m\] { \[\033[01;34m\]\w \[\033[01;34m\]}\[\033[01;32m\]-> \[\033[00m\]'

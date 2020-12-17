@@ -26,11 +26,8 @@ cask 'dropbox'
 cask 'google-drive-file-stream'
 
 # Multimedia
-cask 'vlc'
 cask 'transmission'
 
 # Chat
 cask 'slack'
 cask 'telegram'
-cask 'limechat'
-cask 'skype'

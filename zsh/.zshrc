@@ -53,7 +53,7 @@ plugins=(brew git git-extras git-flow docker docker-compose gradle mvn node npm 
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,12 +82,6 @@ export LANG=ko_KR.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Add `~/bin` to the `$PATH`
-for file in $HOME/bin/*; do
-	[ -r "$file" ] && [ -d "$file" ] && export PATH="$file:$PATH";
-done;
-unset file;
 
 # Every ~/.extra* files are being sourced.
 for extra in $(find $HOME -mindepth 1 -maxdepth 1 \( -type f -o -type l \) -name ".extra*"); do
