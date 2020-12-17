@@ -2,3 +2,7 @@ not-shared
 java/.gradle
 *.log
 .DS_Store
+.idea/dotfiles.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
