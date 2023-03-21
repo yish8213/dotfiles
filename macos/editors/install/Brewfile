@@ -1,0 +1,3 @@
+cask_args appdir: '/Applications'
+
+cask 'visual-studio-code'

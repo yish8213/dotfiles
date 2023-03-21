@@ -1,0 +1,10 @@
+cask_args appdir: '/Applications'
+
+brew 'zsh'
+brew 'zsh-autocomplete'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-history-substring-search'
+
+brew 'autojump'
+
+cask 'iterm2'

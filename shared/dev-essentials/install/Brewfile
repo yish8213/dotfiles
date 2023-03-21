@@ -1,0 +1,2 @@
+brew 'lnav'
+brew 'open-completion'

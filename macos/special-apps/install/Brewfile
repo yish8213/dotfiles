@@ -1,0 +1,11 @@
+cask_args appdir: '/Applications'
+
+# Compression
+brew 'p7zip'
+cask 'the-unarchiver'
+
+# Recovery
+brew 'testdisk'
+
+# File transfer
+cask 'cyberduck'

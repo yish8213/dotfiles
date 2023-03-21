@@ -1,0 +1,13 @@
+tap 'pivotal/tap'
+
+# Java development
+brew 'openjdk'
+
+brew 'groovy'
+brew 'kotlin'
+brew 'gradle'
+
+brew 'maven'
+brew 'maven-completion'
+
+brew 'jmeter'

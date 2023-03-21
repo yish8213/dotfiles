@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-export JAVA_HOME=$(/usr/libexec/java_home)
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export GRADLE_HOME=/usr/local/opt/gradle/libexec
-
-export PATH=$JAVA_HOME/bin:$PATH

@@ -1,0 +1,15 @@
+cask_args appdir: '/Applications'
+
+# GNU tools
+## See https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+brew 'coreutils'
+brew 'gnu-tar'
+brew 'gnu-which'
+brew 'grep'
+brew 'gzip'
+brew 'lsof'
+brew 'less'
+brew 'rsync'
+brew 'colordiff'
+brew 'watch'
+brew 'gawk'

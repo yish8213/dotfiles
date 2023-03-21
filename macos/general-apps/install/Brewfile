@@ -1,0 +1,28 @@
+cask_args appdir: '/Applications'
+
+# Convenience
+cask 'cheatsheet'
+
+# Browsers
+cask 'firefox'
+
+# Writing
+cask 'scrivener'
+cask 'grammarly'
+cask 'markdown-service-tools'
+
+# Idea theorem
+cask 'anki'
+cask 'evernote'
+cask 'skitch'
+
+# Cloud drives
+cask 'dropbox'
+cask 'google-drive'
+
+# Multimedia
+cask 'transmission'
+
+# Chat
+cask 'slack'
+cask 'telegram'
