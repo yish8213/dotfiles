@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-extras git-flow docker docker-compose gradle mvn node npm osx autojump)
+plugins=(brew git git-extras git-flow docker docker-compose gradle mvn node npm macos autojump)
 
 # User configuration
 
