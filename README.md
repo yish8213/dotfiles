@@ -9,6 +9,13 @@ cd "$HOME/dotfiles" && git clone https://github.com/yish8213/dotfiles.git . && .
 
 That's it!
 
+### Utlils
+
+```bash
+unlink-all.sh     # remove all the symbolic links in the target directory
+restow-only.sh    # run restow only
+```
+
 ## Thanks to…
 - [andromedarabbit/dotfiles](https://github.com/andromedarabbit/dotfiles)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
