@@ -1,1 +1,1 @@
-brew 'node'
+brew 'node@22'

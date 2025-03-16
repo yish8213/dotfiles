@@ -1,15 +1,11 @@
 cask_args appdir: '/Applications'
 
-# Convenience
-cask 'cheatsheet'
-
 # Browsers
 cask 'firefox'
 
 # Writing
 cask 'scrivener'
 cask 'grammarly'
-cask 'markdown-service-tools'
 
 # Idea theorem
 cask 'anki'
@@ -26,3 +22,4 @@ cask 'transmission'
 # Chat
 cask 'slack'
 cask 'telegram'
+cask 'discord'

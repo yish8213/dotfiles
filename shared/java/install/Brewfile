@@ -9,5 +9,3 @@ brew 'gradle'
 
 brew 'maven'
 brew 'maven-completion'
-
-brew 'jmeter'
