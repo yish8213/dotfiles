@@ -2,7 +2,7 @@
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
 
 THIS_SHELL="zsh"
-THIS_SHELL_PATH="/usr/local/bin/$THIS_SHELL"
+THIS_SHELL_PATH="/bin/$THIS_SHELL"
 OH_MY_ZSH_PATH="$HOME/.oh-my-zsh"
 
 if test ! -f "$THIS_SHELL_PATH" && test ! -d "$OH_MY_ZSH_PATH"
