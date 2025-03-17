@@ -5,12 +5,10 @@ cask 'firefox'
 
 # Writing
 cask 'scrivener'
-cask 'grammarly'
 
 # Idea theorem
 cask 'anki'
 cask 'evernote'
-cask 'skitch'
 
 # Cloud drives
 cask 'dropbox'

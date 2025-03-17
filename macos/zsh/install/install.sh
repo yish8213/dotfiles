@@ -14,7 +14,7 @@ then
   sudo bash -c "echo $THIS_SHELL_PATH >> /etc/shells"
   
   # Clone the oh-my-zsh repository
-  git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH_PATH
+  git clone https://github.com/ohmyzsh/ohmyzsh.git $OH_MY_ZSH_PATH
 fi
 
 # Change to the new shell

@@ -47,8 +47,9 @@ brew bundle
 
 # Find the installers and run them iteratively
 ## Ref: https://github.com/holman/dotfiles/blob/master/script/install
-find ./shared/ ./"$BREW_OS"/ -name install.sh | while read installer;
-  do sh -c "chmod +x ${installer} && ${installer}";
+find ./shared ./"$BREW_OS" -name install.sh | while read installer; do
+  chmod +x "$installer"
+  "$installer"
 done
 
 # Remove outdated versions from the cellar.
