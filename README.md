@@ -9,7 +9,7 @@ cd "$HOME/dotfiles" && git clone https://github.com/yish8213/dotfiles.git . && .
 
 That's it!
 
-### Utlils
+### Utils
 
 ```bash
 unlink-all.sh     # remove all the symbolic links in the target directory
