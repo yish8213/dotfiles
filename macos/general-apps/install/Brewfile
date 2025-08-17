@@ -11,13 +11,11 @@ cask 'anki'
 cask 'evernote'
 
 # Cloud drives
-cask 'dropbox'
 cask 'google-drive'
 
 # Multimedia
 cask 'transmission'
 
 # Chat
-cask 'slack'
 cask 'telegram'
 cask 'discord'

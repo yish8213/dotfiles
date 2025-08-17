@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
 cask 'lastpass'
-cask 'tunnelblick'
 
 brew 'gpg2'
