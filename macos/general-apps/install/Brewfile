@@ -18,4 +18,3 @@ cask 'transmission'
 
 # Chat
 cask 'telegram'
-cask 'discord'
