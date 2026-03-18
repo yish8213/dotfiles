@@ -1,0 +1,5 @@
+cask 'codex'
+cask 'claude-code'
+brew 'gemini-cli'
+cask 'copilot-cli'
+
