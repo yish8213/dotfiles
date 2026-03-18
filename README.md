@@ -1,5 +1,11 @@
 # dotfiles
 
+Supported platforms:
+
+- macOS
+- Ubuntu / Debian
+- Fedora
+
 You should clone the repository to your home directory. [GNU Stow is not going to work if you clone this to somewhere and create the symbolic link to it](https://unix.stackexchange.com/questions/246983/can-gnu-stow-use-a-stow-directory-that-is-a-symbolic-link).
 
 ```bash
@@ -8,6 +14,8 @@ cd "$HOME/dotfiles" && git clone https://github.com/yish8213/dotfiles.git . && .
 ```
 
 That's it!
+
+On Linux, `bootstrap.sh` detects the distro from `/etc/os-release` and uses the matching package directory (`ubuntu/` for Ubuntu/Debian, `fedora/` for Fedora) in addition to `shared/`.
 
 ### Utils
 

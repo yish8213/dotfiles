@@ -22,7 +22,26 @@ detect_os() {
             echo "macos"
             ;;
         Linux)
-            echo "ubuntu"
+            if [[ -f /etc/os-release ]]; then
+                local distro
+                distro=$(grep '^ID=' /etc/os-release | cut -d'=' -f2 | tr -d '"')
+
+                case "$distro" in
+                    ubuntu|debian)
+                        echo "ubuntu"
+                        ;;
+                    fedora)
+                        echo "fedora"
+                        ;;
+                    *)
+                        log_error "Unsupported Linux distribution: $distro"
+                        exit 1
+                        ;;
+                esac
+            else
+                log_error "Cannot detect Linux distribution: /etc/os-release not found"
+                exit 1
+            fi
             ;;
         *)
             log_error "Unknown OS: $(uname -s)"

@@ -43,22 +43,31 @@ if [[ -z "$BREW_OS" ]]; then
     exit 1
 fi
 
-# Install Ubuntu prerequisites if needed
-install_ubuntu_prereqs() {
-    if [[ "$BREW_OS" == "ubuntu" ]]; then
-        log_info "Installing Ubuntu prerequisites..."
-        if ! sudo apt update; then
-            log_error "Failed to update package lists"
-            return 1
-        fi
+# Install Linux prerequisites if needed
+install_linux_prereqs() {
+    case "$BREW_OS" in
+        ubuntu)
+            log_info "Installing Ubuntu prerequisites..."
+            if ! sudo apt update; then
+                log_error "Failed to update package lists"
+                return 1
+            fi
 
-        if ! sudo apt install -y build-essential procps curl file git; then
-            log_error "Failed to install required packages"
-            return 1
-        fi
+            if ! sudo apt install -y build-essential procps curl file git; then
+                log_error "Failed to install required packages"
+                return 1
+            fi
 
-        sudo apt autoremove --purge -y || log_warn "Failed to autoremove packages"
-    fi
+            sudo apt autoremove --purge -y || log_warn "Failed to autoremove packages"
+            ;;
+        fedora)
+            log_info "Installing Fedora prerequisites..."
+            if ! sudo dnf install -y gcc gcc-c++ make procps-ng curl file git; then
+                log_error "Failed to install required packages"
+                return 1
+            fi
+            ;;
+    esac
 }
 
 # Install or verify Homebrew
@@ -75,9 +84,9 @@ install_homebrew() {
     fi
 }
 
-# Configure Homebrew PATH for Ubuntu
+# Configure Homebrew PATH for Linux
 configure_brew_path() {
-    if [[ "$BREW_OS" == "ubuntu" ]]; then
+    if [[ "$BREW_OS" == "ubuntu" || "$BREW_OS" == "fedora" ]]; then
         local brew_shellenv='eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
 
         if ! grep -q "linuxbrew" ~/.profile 2>/dev/null; then
@@ -183,7 +192,7 @@ stow_packages() {
 main() {
     log_info "Starting dotfiles bootstrap..."
 
-    install_ubuntu_prereqs || log_error "Ubuntu prerequisites installation failed"
+    install_linux_prereqs || log_error "Linux prerequisites installation failed"
     install_homebrew || { log_error "Homebrew installation failed"; exit 1; }
     configure_brew_path
     install_packages || log_error "Package installation had issues"
