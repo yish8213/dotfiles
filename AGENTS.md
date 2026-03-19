@@ -20,13 +20,14 @@
 4. Keep `install.sh` small and consistent with the existing pattern:
    - resolve `THIS_DIR`
    - run `brew bundle --verbose --file="$THIS_DIR/Brewfile"`
-5. In each `Brewfile`, use `brew 'name'` for Homebrew formulae and `cask 'name'` for Homebrew casks.
-6. Verify the exact package token and type before adding it:
+5. In each `Brewfile`, list only the directly needed packages; Homebrew resolves transitive dependencies automatically.
+6. In each `Brewfile`, use `brew 'name'` for Homebrew formulae and `cask 'name'` for Homebrew casks.
+7. Verify the exact package token and type before adding it:
    - `brew info --formula <name>` for formulae
    - `brew info --cask <name>` for casks
-7. Prepare `install.sh` and `Brewfile`, but leave actual installation verification to the user. Agents should not treat package installation or runtime login/setup as completed unless the user confirms it.
-8. Keep `shared/` packages Linux-safe. Do not add macOS GUI app casks under `shared/`; reserve those for `macos/` packages. Binary casks are acceptable in `shared/` only when they are verified to work in the Linux Homebrew environment.
-9. Avoid changing unrelated package directories while adding a new platform.
+8. Prepare `install.sh` and `Brewfile`, but leave actual installation verification to the user. Agents should not treat package installation or runtime login/setup as completed unless the user confirms it.
+9. Keep `shared/` packages Linux-safe. Do not add macOS GUI app casks under `shared/`; reserve those for `macos/` packages. Binary casks are acceptable in `shared/` only when they are verified to work in the Linux Homebrew environment.
+10. Avoid changing unrelated package directories while adding a new platform.
 
 ## Adding a new Linux distro
 1. Update `.config` to map the distro's `/etc/os-release` `ID` to a `BREW_OS` directory name.
