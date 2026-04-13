@@ -84,7 +84,7 @@ install_homebrew() {
     fi
 }
 
-# Configure Homebrew PATH for Linux
+# Configure Homebrew PATH for Linux and macOS
 configure_brew_path() {
     if [[ "$BREW_OS" == "ubuntu" || "$BREW_OS" == "fedora" ]]; then
         local brew_shellenv='eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
@@ -98,6 +98,12 @@ configure_brew_path() {
         fi
 
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    elif [[ "$BREW_OS" == "macos" ]]; then
+        if [[ -x /opt/homebrew/bin/brew ]]; then
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+        elif [[ -x /usr/local/bin/brew ]]; then
+            eval "$(/usr/local/bin/brew shellenv)"
+        fi
     fi
 }
 
@@ -127,7 +133,12 @@ run_installers() {
             continue
         fi
 
+        local installers=()
         while IFS= read -r -d '' installer; do
+            installers+=("$installer")
+        done < <(find "$THIS_DIR/$dir" -name "install.sh" -print0)
+
+        for installer in "${installers[@]}"; do
             log_info "Running installer: $installer"
             chmod +x "$installer"
 
@@ -137,7 +148,7 @@ run_installers() {
             else
                 log_error "Failed to run: $installer"
             fi
-        done < <(find "$THIS_DIR/$dir" -name "install.sh" -print0)
+        done
     done
 
     log_info "Ran $installer_count installers"
